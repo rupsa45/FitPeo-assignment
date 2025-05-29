@@ -1,0 +1,167 @@
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  padding: 10px;
+  background: #f8fafc;
+  overflow-y: auto;
+  transition: margin-left 0.3s ease;
+  gap: 10px;
+ 
+}
+.left-part {
+  flex: 1;
+  min-width: 0; 
+}
+
+.right-part{
+    /* background:green; */
+     flex-shrink: 0;
+     width: 700px;
+     padding: 20px;
+    
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.dashboard-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #483AA0;
+  margin: 0;
+}
+
+.dashboard-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.filter-text {
+  font-size: 14px;
+  color: #483AA0;
+  font-weight: 500;
+}
+
+.filter-arrow {
+  font-size: 10px;
+  color: #483AA0;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px 350px;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.anatomy-column {
+  min-height: 200px;
+  background: #e9eef5;
+  border-radius: 15px;
+  height: 400px;
+}
+
+.health-status-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.schedule-section {
+  flex: 1;
+}
+
+.activity-section {
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr 280px;
+  }
+
+  .calendar-column {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-main {
+    padding: 16px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .dashboard-title {
+    font-size: 20px;
+  }
+
+  .dashboard-main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-main {
+    padding: 12px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .dashboard-filter {
+    align-self: flex-end;
+    padding: 6px 12px;
+  }
+
+  .filter-text {
+    font-size: 13px;
+  }
+
+  .dashboard-title {
+    font-size: 18px;
+  }
+
+  .right-part{
+    width: 100%;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-main {
+    padding: 8px;
+  }
+
+  .dashboard-grid {
+    gap: 12px;
+  }
+  
+}

@@ -1,0 +1,100 @@
+.health-status-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.health-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.health-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.health-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.health-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.health-date {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-bottom: 16px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #f1f5f9;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.details-link {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.details-btn {
+  color: #6366f1;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.details-btn:hover {
+  color: #5b21b6;
+}
+
+.arrow {
+  transition: transform 0.2s;
+}
+
+.details-btn:hover .arrow {
+  transform: translateX(2px);
+}
+
+@media (max-width: 768px) {
+  .health-card {
+    padding: 16px;
+  }
+
+  .health-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .health-title {
+    font-size: 14px;
+  }
+}
