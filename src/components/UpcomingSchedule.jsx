@@ -1,6 +1,6 @@
 
 import SimpleAppointmentCard from "./SimpleAppointmentCard"
-import "../Styles/UpcomingSchedule.css"
+import "../styles/UpcomingSchedule.css"
 import { upcomingSchedule } from "../data/CommonData"
 
 const UpcomingSchedule = () => {
